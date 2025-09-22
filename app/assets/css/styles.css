@@ -1,0 +1,85 @@
+@reference "tailwindcss";
+
+body {
+    @apply bg-[#C9F9FF]
+}
+
+h1 {
+    @apply text-5xl text-[#36558F] m-2
+}
+
+h2 {
+    @apply text-4xl text-[#36558F] pb-4
+}
+
+p{
+    @apply pb-4
+}
+
+button {
+    @apply bg-[#856F80] text-white py-1 px-6 rounded-lg m-4
+}
+
+button:hover {
+    @apply bg-[#BFD0E0]
+}
+
+.banner {
+    @apply pb-20 pt-20
+}
+
+.card{
+    @apply bg-[#36558F] text-white rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,0)]
+}
+
+.block {
+    @apply pb-20 px-15
+}
+
+.swiper{
+    @apply mt-20
+}
+
+.navbar {
+    @apply bg-[#856F80] w-full
+}
+/*.draw {*/
+/*    font-size: 72px;*/
+/*    font-family: sans-serif;*/
+/*    fill: none;                !* No fill, only stroke *!*/
+/*    stroke: black;              !* Stroke color *!*/
+/*    stroke-width: 2;*/
+/*    stroke-dasharray: 1000;     !* Total path length *!*/
+/*    stroke-dashoffset: 1000;    !* Start hidden *!*/
+/*    animation: draw 2s linear forwards;*/
+/*}*/
+
+/*@keyframes draw {*/
+/*    to {*/
+/*        stroke-dashoffset: 0;     !* Reveal stroke *!*/
+/*    }*/
+/*}*/
+
+
+/*.swiper {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+
+/*.swiper-slide {*/
+/*    text-align: center;*/
+/*    font-size: 18px;*/
+/*    background: #444;*/
+
+/*    !* Center slide text vertically *!*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.swiper-slide img {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
