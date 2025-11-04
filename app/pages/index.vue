@@ -1,35 +1,30 @@
 <template>
   <Navbar></Navbar>
   <div class="text-center">
+
 <!--  Banner  -->
   <div class="banner">
   <p>Hallo ik ben</p>
-<!--    <svg width="full" height="100" viewBox="0 0 200 100">-->
-<!--      <text x="50" y="70" class="draw">S</text>-->
-<!--      <text x="100" y="70" class="draw">h</text>-->
-<!--      <text x="150" y="70" class="draw">a</text>-->
-<!--      <text x="200" y="70" class="draw">r</text>-->
-<!--      <text x="250" y="70" class="draw">o</text>-->
-<!--      <text x="300" y="70" class="draw">n </text>-->
-<!--      <text x="350" y="70" class="draw">d</text>-->
-<!--      <text x="400" y="70" class="draw">e </text>-->
-<!--      <text x="450" y="70" class="draw">W</text>-->
-<!--      <text x="500" y="70" class="draw">i</text>-->
-<!--      <text x="550" y="70" class="draw">t</text>-->
-<!--    </svg>-->
-
-<!--    <object type="image/svg+xml" data="/svg/name.svg"></object>-->
-
-<h1>Sharon de Wit</h1> <!-- Animatie  letters toevoegen eventueel-->
+<h1>Sharon de Wit</h1>
     <p class="pt-4">Fullstack Developer & Security Analyst</p>
-    <button>CV</button>
-    <!-- Carousel met foto's die weergeven wie ik ben -->
+    <button>
+      <div class="flex gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 306.7L246.6 265.3C234.1 252.8 213.8 252.8 201.3 265.3C188.8 277.8 188.8 298.1 201.3 310.6L297.3 406.6C309.8 419.1 330.1 419.1 342.6 406.6L438.6 310.6C451.1 298.1 451.1 277.8 438.6 265.3C426.1 252.8 405.8 252.8 393.3 265.3L352 306.7L352 96zM160 384C124.7 384 96 412.7 96 448L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 448C544 412.7 515.3 384 480 384L433.1 384L376.5 440.6C345.3 471.8 294.6 471.8 263.4 440.6L206.9 384L160 384zM464 440C477.3 440 488 450.7 488 464C488 477.3 477.3 488 464 488C450.7 488 440 477.3 440 464C440 450.7 450.7 440 464 440z"/></svg>Download CV
+      </div>
+    </button>
+
+    <!-- Carousel with pictures -->
     <Swiper :modules="[Autoplay]"
-              :slides-per-view="3"
-            :space-between="4"
               :pagination="{ clickable: true }"
               :loop="true"
               :autoplay="{ delay: 2000, disableOnInteraction: false }"
+            :breakpoints="{
+    320: { slidesPerView: 1, spaceBetween: 10 },
+    640: { slidesPerView: 2, spaceBetween: 10 },
+    768: { slidesPerView: 3, spaceBetween: 15 },
+    1024: { slidesPerView: 4, spaceBetween: 20 },
+    1440: { slidesPerView: 5, spaceBetween: 20 }
+  }"
             class="swiper">
       <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
       <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
@@ -42,49 +37,131 @@
       <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
     </Swiper>
   </div>
+
 <!--    About me   -->
     <div class="block">
       <h2 class="subtitle">Over mij</h2>
-<p class="italic">3 jaar ervaring in software development</p>
-      <p>In 2022 ben ik gestart met de opleiding Creative Media & Game Technologies. Sindsdien heb ik een passie gevonden voor programmeren.
+      <div class="bar"/>
+<p class="italic text-[#808080]">3 jaar ervaring in software development</p>
+      <p class="text-left">In 2022 ben ik gestart met de opleiding Creative Media & Game Technologies. Sindsdien heb ik een passie gevonden voor programmeren.
       In maart 2025 ben ik gestart met werken bij Wortell als Triage Analyst, waarbij ik heb gemerkt dat ik ook veel interesse in de cybersecurity heb. Daarom ben ik momenteel bezig met een minor in de cybersecurity. Ik ben bezig met cursussen op Tryhackme op mijn kennis op het gebied van cybersecurity te vergroten en cursussen op Codeacademy om mijn kennis op het gebied van software development te vergroten.</p>
-      <p>Andere hobby's die ik heb zijn fotografie, creatief zijn op het gebied van handwerk en gamen. Voor mijn creatieve hobby heb ik dan ook een eigen bedrijf waarvoor ik glazen graveer en mokken sublimeer. Ook ben ik dol op dieren en heb ik een kat. </p>
+      <p class="text-left">Andere hobby's die ik heb zijn fotografie, creatief zijn op het gebied van handwerk en gamen. Voor mijn creatieve hobby heb ik dan ook een eigen bedrijf waarvoor ik glazen graveer en mokken sublimeer. Ook ben ik dol op dieren en heb ik een kat. </p>
     </div>
+
 <!--    Recent Projects  -->
-    <div class="block">
-      <h2>Recente projecten</h2>
-      <div class="grid grid-cols-3 gap-4">
-      <div class="card">
-        <h3 class="font-bold text-2xl py-4 px-2">Projecttitel</h3>
-        <img class="pb-2" src="/img/MainBefore.jpg">
-        <p>Technologie: </p>
-        <button>Bekijk project</button>
-      </div>
-        <div class="card">
-          <h3 class="font-bold text-2xl py-4 px-2">Projecttitel</h3>
-          <img class="pb-2" src="/img/MainBefore.jpg">
-          <p>Technologie: </p>
-          <button>Bekijk project</button>
+      <div class="block" >
+        <h2>Recente projecten</h2>
+        <div class="bar"/>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div
+              class="text-left card flex flex-col bg-[#36558F] text-white rounded-lg duration-300"
+              v-for="(card, index) in valueCards"
+              :key="index"
+          >
+            <div class="overflow-hidden h-48 sm:h-56 md:h-48">
+              <img
+                  :src="card.image"
+                  alt=""
+                  class="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110 will-change-transform"
+              />
+            </div>
+
+            <div class="px-2 py-4 flex flex-col flex-1">
+              <h4 class="font-bold text-2xl mb-2">{{ card.title }}</h4>
+              <p class="italic mb-2">Technologie: {{ card.technology }}</p>
+              <p class="mb-4">{{ card.description }}</p>
+              <div class="flex-grow"></div>
+              <a :href="card.site" target="_blank" class="button mt-4 flex items-center gap-2 justify-center">
+                <p>Bekijk Project</p>
+                <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 640 640"><path fill="#ffffff" d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/></svg>
+              </a>
+
+            </div>
+          </div>
         </div>
+
       </div>
-      <!-- Kaarten met projecten, als je erop klikt ga je naar de link -->
-    </div>
+
 <!--    Skills   -->
     <div class="block">
       <h2>Skills</h2>
+      <div class="bar"/>
+    <div class="grid lg:grid-cols-2">
+      <div>
+   <h3>Languages</h3>
+    <ProgressBar :skills="languageSkills" />
+      </div>
+ <div>
+    <h3>Frameworks</h3>
+    <ProgressBar :skills="frameworkSkills" />
     </div>
+    </div>
+    </div>
+    
+
 <!--    Work Experience   -->
     <div class="block">
       <h2>Werkervaring</h2>
+      <div class="bar"/>
     </div>
+
 <!--    Education   -->
     <div class="block">
       <h2>Opleiding</h2>
+      <div class="bar"/>
     </div>
+
 <!--    Certificates   -->
     <div class="block">
       <h2>Behaalde certificaten</h2>
+      <div class="bar"/>
+      <h3>Development</h3>
+  <Swiper
+      :modules="[Autoplay]"
+      :pagination="{ clickable: true }"
+      :loop="true"
+      :autoplay="{ delay: 2000, disableOnInteraction: false }"
+      :breakpoints="{
+        320: { slidesPerView: 1, spaceBetween: 10 },
+        640: { slidesPerView: 2, spaceBetween: 10 },
+        768: { slidesPerView: 3, spaceBetween: 15 },
+        1024: { slidesPerView: 4, spaceBetween: 20 },
+        1440: { slidesPerView: 5, spaceBetween: 20 }
+      }"
+      class="swiper mb-6"
+    >
+      <SwiperSlide
+        v-for="certificate in developmentCertificates"
+        :key="certificate.name"
+      >
+        <CertificateCard :certificate="certificate" />
+      </SwiperSlide>
+    </Swiper>
+<h3>Cybersecurity</h3>
+  <Swiper
+      :modules="[Autoplay]"
+      :pagination="{ clickable: true }"
+      :loop="true"
+      :autoplay="{ delay: 2000, disableOnInteraction: false }"
+      :breakpoints="{
+        320: { slidesPerView: 1, spaceBetween: 10 },
+        640: { slidesPerView: 2, spaceBetween: 10 },
+        768: { slidesPerView: 3, spaceBetween: 15 },
+        1024: { slidesPerView: 4, spaceBetween: 20 },
+        1440: { slidesPerView: 5, spaceBetween: 20 }
+      }"
+      class="swiper mb-6"
+    >
+      <SwiperSlide
+        v-for="certificate in cybersecurityCertificates"
+        :key="certificate.name"
+      >
+        <CertificateCard :certificate="certificate" />
+      </SwiperSlide>
+    </Swiper>
+   
     </div>
+
 <!--    Contact me   -->
     <div class="block">
       <h2>Neem contact op</h2>
@@ -99,20 +176,77 @@ import 'swiper/css/autoplay'
 
 import { Autoplay } from 'swiper/modules'
 
+import {ref, onMounted} from 'vue';
+
+import ProgressBar from '../components/progressbar.vue'
+import CertificateCard from '../components/certificatecard.vue'
+
 const valueCards = [
   {
     image: '/img/MainBefore.jpg',
-    title: 'title1',
-    technology: 'technologie1',
-    site: 'www.nerdyglazen.com'
+    title: 'Nerdy Glazen',
+    technology: 'Shopify',
+    description: 'Al een aantal jaren graveer ik als hobby glazen met de hand. Een paar jaar geleden heb ik mij hiervoor ingeschreven bij KVK zodat ik een eigen Shopify webshop kon opzetten. Het plan is om later een eigen webshop te bouwen, maar daarvoor ben ik nu eerst secure coding aan het leren, omdat er erg veel gevoelige informatie bij te pas komt.',
+    site: 'https://www.nerdyglazen.com'
   },
   {
     image: '/img/MainBefore.jpg',
-    title: 'title2',
-    technology: 'technologie2',
-    site: 'www.nerdyglazen.com'
+    title: 'Reefkeep',
+    technology: 'Unity',
+    description: 'Reefkeep is een game die we hebben ontwikkeld met een groep van 5 studenten.',
+    site: 'https://www.nerdyglazen.com'
+  },
+  {
+    image: '/img/MainBefore.jpg',
+    title: 'PetSitterCare',
+    technology: 'React Native',
+    description: 'Als bijbaantje verzorgde ik vaak katten en liet ik honden uit, hiervoor gebruikte ik zelf de app Pawshake. Echter ondervond ik zelf veel problemen aan Pawshake, dus ben ik met 2 anderen op het moment aan een nieuwe app genaamd PetSitterCare, die veel meer gefocust is op de gebruiker van de applicatie. Ik heb deze applicatie eerder ontwikkeld voor een schoolopdracht, maar ik ben hem opnieuw aan het bouwen om hem gebruiksvriendelijker en veiliger te maken.',
+    site: ''
+  },
+  {
+    image: '/img/MainBefore.jpg',
+    title: 'Eating with allergies',
+    technology: 'React Native',
+    description: 'Ik heb een jonger zusje die 1,5 jaar geleden gediagnosticeerd is met coeliacie en een half jaar geleden ook nog met een lactose intolerantie. Sindsdien is het vrij moeilijk om recepten te vinden die ook nog lekker zijn. Er zijn nauwelijks applicaties waarop mensen hun eigen recepten kunnen plaatsen en je kan filteren op allergenen. Daarom ben ik momenteel deze applicatie aan het ontwikkelen.',
+    site: 'https://www.nerdyglazen.com'
   }
 ]
 
+const languageSkills = [
+ 
+  { name: 'HTML', percentage: '90%' },
+    { name: 'CSS', percentage: '90%' },
+     {
+    name: 'Javascript',
+    percentage: '70%'
+  },
+   {
+    name: 'Typescript',
+    percentage: '30%'
+  },
+  { name: 'PHP',
+  percentage: '20%'
+},
+    { name: 'C#', percentage: '10%' },
+]
+
+
+const frameworkSkills = [
+  { name: 'Vue.js', percentage: '80%' },
+  { name: 'Nuxt.js', percentage: '65%' },
+  { name: 'React', percentage: '50%' },
+  { name: 'React Native', percentage: '30%' },
+   { name: 'NextJS', percentage: '10%' },
+    { name: 'Laravel', percentage: '10%' }
+];
+
+const developmentCertificates = [
+{name: 'test', image: "/img/MainBefore.jpg", platform:"Tryhackme"},
+]
+
+const cybersecurityCertificates = [
+  {name: 'test', image: "/img/MainBefore.jpg"},
+   {name: 'test', image: "/img/MainBefore.jpg"},
+]
 
 </script>

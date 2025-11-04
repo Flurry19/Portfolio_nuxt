@@ -5,22 +5,24 @@ body {
 }
 
 h1 {
-    @apply text-5xl text-[#36558F] m-2
+    @apply text-5xl text-[#36558F] m-2 font-bold
 }
 
 h2 {
-    @apply text-4xl text-[#36558F] pb-4
+    @apply text-4xl text-[#36558F] pb-4 font-bold
 }
 
-p{
-    @apply pb-4
+h3 {
+    @apply text-2xl text-[#36558F] pb-4 font-bold
 }
 
-button {
-    @apply bg-[#856F80] text-white py-1 px-6 rounded-lg m-4
+
+
+button, .button {
+    @apply bg-[#856F80] text-white py-1 px-3 rounded-lg m-4
 }
 
-button:hover {
+button:hover, .button:hover {
     @apply bg-[#BFD0E0]
 }
 
@@ -28,21 +30,39 @@ button:hover {
     @apply pb-20 pt-20
 }
 
-.card{
-    @apply bg-[#36558F] text-white rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,0)]
+.bar {
+    @apply h-1 w-30 bg-[#856F80] mx-auto mb-8 rounded-full
 }
+.card {
+    @apply bg-[#36558F] text-white rounded-lg pb-6 overflow-hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    @apply w-full h-full object-cover transition-transform duration-500 ease-in-out;
+}
+
+.card:hover img {
+    @apply scale-110;
+}
+
 
 .block {
-    @apply pb-20 px-15
+    @apply pb-20 sm:px-15 px-2
 }
 
-.swiper{
-    @apply mt-20
-}
+
 
 .navbar {
     @apply bg-[#856F80] w-full
 }
+
+
+
 /*.draw {*/
 /*    font-size: 72px;*/
 /*    font-family: sans-serif;*/
