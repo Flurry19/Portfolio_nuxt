@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 body {
-    @apply bg-[#C9F9FF]
+    @apply bg-[#f1f1f1]
 }
 
 h1 {
@@ -23,7 +23,7 @@ button, .button {
 }
 
 button:hover, .button:hover {
-    @apply bg-[#BFD0E0]
+    @apply bg-[#A99AA6]
 }
 
 .banner {

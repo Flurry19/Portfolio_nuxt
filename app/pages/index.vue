@@ -7,11 +7,28 @@
   <p>Hallo ik ben</p>
 <h1>Sharon de Wit</h1>
     <p class="pt-4">Fullstack Developer & Security Analyst</p>
-    <button>
-      <div class="flex gap-2">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 306.7L246.6 265.3C234.1 252.8 213.8 252.8 201.3 265.3C188.8 277.8 188.8 298.1 201.3 310.6L297.3 406.6C309.8 419.1 330.1 419.1 342.6 406.6L438.6 310.6C451.1 298.1 451.1 277.8 438.6 265.3C426.1 252.8 405.8 252.8 393.3 265.3L352 306.7L352 96zM160 384C124.7 384 96 412.7 96 448L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 448C544 412.7 515.3 384 480 384L433.1 384L376.5 440.6C345.3 471.8 294.6 471.8 263.4 440.6L206.9 384L160 384zM464 440C477.3 440 488 450.7 488 464C488 477.3 477.3 488 464 488C450.7 488 440 477.3 440 464C440 450.7 450.7 440 464 440z"/></svg>Download CV
-      </div>
-    </button>
+    <div class="flex flex-col items-center">
+      <div class="flex flex-row gap-2 items-end">
+<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><path fill="#000000" d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg>
+        <a href="mailto:sharonirenedewit@gmail.com">sharonirenedewit@gmail.com</a>
+    </div>
+    <div class="flex flex-row gap-2 items-end">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><path fill="#000000" d="M224.2 89C216.3 70.1 195.7 60.1 176.1 65.4L170.6 66.9C106 84.5 50.8 147.1 66.9 223.3C104 398.3 241.7 536 416.7 573.1C493 589.3 555.5 534 573.1 469.4L574.6 463.9C580 444.2 569.9 423.6 551.1 415.8L453.8 375.3C437.3 368.4 418.2 373.2 406.8 387.1L368.2 434.3C297.9 399.4 241.3 341 208.8 269.3L253 233.3C266.9 222 271.6 202.9 264.8 186.3L224.2 89z"/></svg>
+        <a href="tel:+31624500885">+31 6 245 008 85</a>
+    </div>
+    </div>
+<div class="flex justify-center items-center w-full">
+  <a
+    class="button flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded"
+    href="/files/CV Sharon de Wit 2025.pdf"
+    target="_blank"
+  >
+    <p class="m-0">Open CV</p>
+    <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 640 640">
+      <path fill="#ffffff" d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/>
+    </svg>
+  </a>
+</div>
 
     <!-- Carousel with pictures -->
     <Swiper :modules="[Autoplay]"
@@ -42,7 +59,7 @@
     <div class="block">
       <h2 class="subtitle">Over mij</h2>
       <div class="bar"/>
-<p class="italic text-[#808080]">3 jaar ervaring in software development</p>
+<p class="italic text-[#808080] mb-4">3 jaar ervaring in software development</p>
       <p class="text-left">In 2022 ben ik gestart met de opleiding Creative Media & Game Technologies. Sindsdien heb ik een passie gevonden voor programmeren.
       In maart 2025 ben ik gestart met werken bij Wortell als Triage Analyst, waarbij ik heb gemerkt dat ik ook veel interesse in de cybersecurity heb. Daarom ben ik momenteel bezig met een minor in de cybersecurity. Ik ben bezig met cursussen op Tryhackme op mijn kennis op het gebied van cybersecurity te vergroten en cursussen op Codeacademy om mijn kennis op het gebied van software development te vergroten.</p>
       <p class="text-left">Andere hobby's die ik heb zijn fotografie, creatief zijn op het gebied van handwerk en gamen. Voor mijn creatieve hobby heb ik dan ook een eigen bedrijf waarvoor ik glazen graveer en mokken sublimeer. Ook ben ik dol op dieren en heb ik een kat. </p>
@@ -162,11 +179,6 @@
    
     </div>
 
-<!--    Contact me   -->
-    <div class="block">
-      <h2>Neem contact op</h2>
-    </div>
-
   </div>
 </template>
 <script setup>
@@ -213,8 +225,7 @@ const valueCards = [
 ]
 
 const languageSkills = [
- 
-  { name: 'HTML', percentage: '90%' },
+   { name: 'HTML', percentage: '90%' },
     { name: 'CSS', percentage: '90%' },
      {
     name: 'Javascript',
@@ -230,7 +241,6 @@ const languageSkills = [
     { name: 'C#', percentage: '10%' },
 ]
 
-
 const frameworkSkills = [
   { name: 'Vue.js', percentage: '80%' },
   { name: 'Nuxt.js', percentage: '65%' },
@@ -241,12 +251,14 @@ const frameworkSkills = [
 ];
 
 const developmentCertificates = [
-{name: 'test', image: "/img/MainBefore.jpg", platform:"Tryhackme"},
+  {name: 'Essentiële Javascript-training', image: "/img/Essentiele_javascript-training_image.png", platform:"LinkedIn", pdf: '/files/Essentiele JavaScript-training_certificate.pdf'},
+   {name: 'Learn HTML Course', image: "/img/Learn HTML course_image.png", platform:"Codeacademy", pdf: '/files/Learn HTML Course_certificate.pdf'},
+  {name: 'Javascript Course', image: "/img/Learn Javascript Course_image.png", platform:"Codeacademy", pdf: '/files/Learn Javascript Course_certificate.pdf'},
+  {name: 'Intermediate Javascript Course', image: "/img/Learn Intermediate Javascript Course_image.png", platform:"Codeacademy", pdf: '/files/Learn Intermediate Javascript Course_certificate.pdf'},
 ]
 
 const cybersecurityCertificates = [
-  {name: 'test', image: "/img/MainBefore.jpg"},
-   {name: 'test', image: "/img/MainBefore.jpg"},
+{name: 'Pre Security Path', image: "/img/Pre-Security-Path_certificate_image.png", platform:"Tryhackme", pdf: '/files/Pre-Security_certificate.pdf'},
 ]
 
 </script>
