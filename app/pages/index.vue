@@ -43,15 +43,13 @@
     1440: { slidesPerView: 5, spaceBetween: 20 }
   }"
             class="swiper">
-      <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
-      <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
-      <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
-      <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
-      <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
-      <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
-      <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
-      <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
-      <SwiperSlide><img src="/img/MainBefore.jpg"></SwiperSlide>
+      <SwiperSlide><img class="swiper-img" src="/img/FantasyFest.jpeg"></SwiperSlide>
+      <SwiperSlide><img class="swiper-img" src="/img/Frankrijk.jpg"></SwiperSlide>
+      <SwiperSlide><img class="swiper-img" src="/img/Fotografie.jpg"></SwiperSlide>
+      <SwiperSlide><img class="swiper-img" src="/img/Levy.JPG"></SwiperSlide>
+      <SwiperSlide><img class="swiper-img" src="/img/Diploma-uitreiking.jpg"></SwiperSlide>
+      <SwiperSlide><img class="swiper-img" src="/img/Appelflappen.jpg"></SwiperSlide>
+      <SwiperSlide><img class="swiper-img" src="/img/MainBefore.jpg"></SwiperSlide>
     </Swiper>
   </div>
 
@@ -83,12 +81,12 @@
               />
             </div>
 
-            <div class="px-2 py-4 flex flex-col flex-1">
+            <div class="px-4 py-4 flex flex-col flex-1">
               <h4 class="font-bold text-2xl mb-2">{{ card.title }}</h4>
               <p class="italic mb-2">Technologie: {{ card.technology }}</p>
               <p class="mb-4">{{ card.description }}</p>
               <div class="flex-grow"></div>
-              <a :href="card.site" target="_blank" class="button mt-4 flex items-center gap-2 justify-center">
+              <a v-if="card.site" :href="card.site" target="_blank" class="button mt-4 flex items-center gap-2 justify-center">
                 <p>Bekijk Project</p>
                 <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 640 640"><path fill="#ffffff" d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/></svg>
               </a>
@@ -120,12 +118,24 @@
     <div class="block">
       <h2>Werkervaring</h2>
       <div class="bar"/>
+      <div>
+<div v-for="work in workExperiences"
+      :key="work.place">
+  <Workarea :item="work"/>
+</div>
+</div>
     </div>
 
 <!--    Education   -->
     <div class="block">
       <h2>Opleiding</h2>
       <div class="bar"/>
+      <div>
+        <div v-for="education in educations"
+             :key="education.place">
+          <Workarea :item="education"/>
+        </div>
+      </div>
     </div>
 
 <!--    Certificates   -->
@@ -192,35 +202,35 @@ import {ref, onMounted} from 'vue';
 
 import ProgressBar from '../components/progressbar.vue'
 import CertificateCard from '../components/certificatecard.vue'
+import Workarea from "../components/workarea.vue";
 
 const valueCards = [
   {
-    image: '/img/MainBefore.jpg',
+    image: '/img/Nerdy Glazen logo.jpg',
     title: 'Nerdy Glazen',
     technology: 'Shopify',
     description: 'Al een aantal jaren graveer ik als hobby glazen met de hand. Een paar jaar geleden heb ik mij hiervoor ingeschreven bij KVK zodat ik een eigen Shopify webshop kon opzetten. Het plan is om later een eigen webshop te bouwen, maar daarvoor ben ik nu eerst secure coding aan het leren, omdat er erg veel gevoelige informatie bij te pas komt.',
     site: 'https://www.nerdyglazen.com'
   },
   {
-    image: '/img/MainBefore.jpg',
+    image: '/img/Reefkeep_image.png',
     title: 'Reefkeep',
     technology: 'Unity',
     description: 'Reefkeep is een game die we hebben ontwikkeld met een groep van 5 studenten.',
-    site: 'https://www.nerdyglazen.com'
+    site: 'https://studio-visopland.itch.io/reef-keep'
   },
   {
-    image: '/img/MainBefore.jpg',
+    image: '/img/George.JPG',
     title: 'PetSitterCare',
     technology: 'React Native',
-    description: 'Als bijbaantje verzorgde ik vaak katten en liet ik honden uit, hiervoor gebruikte ik zelf de app Pawshake. Echter ondervond ik zelf veel problemen aan Pawshake, dus ben ik met 2 anderen op het moment aan een nieuwe app genaamd PetSitterCare, die veel meer gefocust is op de gebruiker van de applicatie. Ik heb deze applicatie eerder ontwikkeld voor een schoolopdracht, maar ik ben hem opnieuw aan het bouwen om hem gebruiksvriendelijker en veiliger te maken.',
-    site: ''
+    description: 'Als bijbaantje verzorgde ik vaak katten en liet ik honden uit, hiervoor gebruikte ik zelf de app Pawshake. Echter ondervond ik zelf veel problemen aan Pawshake, dus ben ik met 2 anderen op het moment bezig met het ontwikkelen van een nieuwe app genaamd PetSitterCare, die veel meer gefocust is op de gebruiker van de applicatie. Ik heb deze applicatie eerder ontwikkeld voor een schoolopdracht, maar ik ben hem opnieuw aan het bouwen om hem gebruiksvriendelijker en veiliger te maken. De oude applicatie is hieronder gelinkt.',
+    site: 'https://petsittercare.vercel.app/#/'
   },
   {
-    image: '/img/MainBefore.jpg',
+    image: '/img/Appelflappen.jpg',
     title: 'Eating with allergies',
     technology: 'React Native',
     description: 'Ik heb een jonger zusje die 1,5 jaar geleden gediagnosticeerd is met coeliacie en een half jaar geleden ook nog met een lactose intolerantie. Sindsdien is het vrij moeilijk om recepten te vinden die ook nog lekker zijn. Er zijn nauwelijks applicaties waarop mensen hun eigen recepten kunnen plaatsen en je kan filteren op allergenen. Daarom ben ik momenteel deze applicatie aan het ontwikkelen.',
-    site: 'https://www.nerdyglazen.com'
   }
 ]
 
@@ -261,4 +271,57 @@ const cybersecurityCertificates = [
 {name: 'Pre Security Path', image: "/img/Pre-Security-Path_certificate_image.png", platform:"Tryhackme", pdf: '/files/Pre-Security_certificate.pdf'},
 ]
 
+const workExperiences = [
+  {
+    date: 'Januari 2022 - Juli 2022',
+    place: 'Teleperformance - GGD Vaccinatielijn',
+    function: 'Medewerker Vaccinatielijn GGD'
+  } , {
+    date: 'Juni 2022 - Februari 2023',
+    place: 'Local Heroes/ A La Carte',
+    function: 'Hospitality Medewerker'
+  }, {
+    date: 'Februari 2023 - Juni 2023',
+    place: 'Golfpark de Star',
+    function: 'Horeca Medewerker'
+  }, {
+    date: 'Juli 2023 - Augustus 2024',
+    place: 'Golfbaan Delfland',
+    function: 'Horeca Medewerker'
+  }, {
+    date: 'April 2024 - Juni 2024',
+    place: 'LeafyLines (Freelance)',
+    function: 'Fullstack Developer'
+  }, {
+    date: 'Augustus 2024 - Februari 2025',
+    place: 'Meewerkstage DIGIWEDO',
+    function: 'Wordpress Developer'
+  }, {
+    date: 'Maart 2025 - HEDEN',
+    place: 'Wortell',
+    function: 'Triage Security Analyst'
+  }
+]
+
+const educations = [
+    {
+  date: 'Augustus 2012 - Juli 2014',
+  place: 'Aloysius College',
+  function: 'Gifted Education'
+}, {
+    date: 'Juli 2014 - Juni 2019',
+    place: 'Picasso Lyceum',
+    function: 'VWO - Natuur en Gezondheid'
+  },
+  {
+    date: 'September 2019 - December 2021',
+    place: 'Universiteit Antwerpen',
+    function: 'Diergeneeskunde (niet afgerond)'
+  },
+  {
+    date: 'Augustus 2022 - HEDEN',
+    place: 'Hogeschool Rotterdam',
+    function: 'Creative Media & Game Technologies'
+  }
+]
 </script>

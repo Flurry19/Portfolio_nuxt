@@ -16,7 +16,9 @@ h3 {
     @apply text-2xl text-[#36558F] pb-4 font-bold
 }
 
-
+.swiper-img{
+    @apply h-50 w-80 object-cover
+}
 
 button, .button {
     @apply bg-[#856F80] text-white py-1 px-3 rounded-lg m-4
