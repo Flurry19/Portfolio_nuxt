@@ -63,7 +63,13 @@ button:hover, .button:hover {
     @apply bg-[#856F80] w-full
 }
 
+.swiper-pagination{
+    @apply !static
+}
 
+.swiper-pagination-bullet-active {
+    @apply !bg-[#856F80];
+}
 
 /*.draw {*/
 /*    font-size: 72px;*/

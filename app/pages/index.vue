@@ -57,10 +57,12 @@
     <div class="block">
       <h2 class="subtitle">Over mij</h2>
       <div class="bar"/>
+      <div class="px-4 md:px-20 lg:px-40">
 <p class="italic text-[#808080] mb-4">3 jaar ervaring in software development</p>
       <p class="text-left">In 2022 ben ik gestart met de opleiding Creative Media & Game Technologies. Sindsdien heb ik een passie gevonden voor programmeren.
       In maart 2025 ben ik gestart met werken bij Wortell als Triage Analyst, waarbij ik heb gemerkt dat ik ook veel interesse in de cybersecurity heb. Daarom ben ik momenteel bezig met een minor in de cybersecurity. Ik ben bezig met cursussen op Tryhackme op mijn kennis op het gebied van cybersecurity te vergroten en cursussen op Codeacademy om mijn kennis op het gebied van software development te vergroten.</p>
       <p class="text-left">Andere hobby's die ik heb zijn fotografie, creatief zijn op het gebied van handwerk en gamen. Voor mijn creatieve hobby heb ik dan ook een eigen bedrijf waarvoor ik glazen graveer en mokken sublimeer. Ook ben ik dol op dieren en heb ik een kat. </p>
+      </div>
     </div>
 
 <!--    Recent Projects  -->
@@ -144,8 +146,8 @@
       <div class="bar"/>
       <h3>Development</h3>
   <Swiper
-      :modules="[Autoplay]"
-      :pagination="{ clickable: true }"
+      :modules="[Autoplay, Pagination]"
+      :pagination="{ clickable: true}"
       :loop="true"
       :autoplay="{ delay: 2000, disableOnInteraction: false }"
       :breakpoints="{
@@ -166,7 +168,7 @@
     </Swiper>
 <h3>Cybersecurity</h3>
   <Swiper
-      :modules="[Autoplay]"
+      :modules="[Autoplay, Pagination]"
       :pagination="{ clickable: true }"
       :loop="true"
       :autoplay="{ delay: 2000, disableOnInteraction: false }"
@@ -195,8 +197,10 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/autoplay'
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-import { Autoplay } from 'swiper/modules'
+import { Autoplay, Pagination } from 'swiper/modules'
 
 import {ref, onMounted} from 'vue';
 
@@ -228,6 +232,20 @@ const valueCards = [
   },
   {
     image: '/img/Appelflappen.jpg',
+    title: 'Stichting Dierenlot',
+    technology: 'Wordpress - Oxygen Builder',
+    description: 'Tijdens mijn stage heb ik gewerkt aan de nieuwe website van Stichting Dierenlot. De oude website moest opgebouwd worden naar een Wordpress website. De styling is hetzelfde gebleven als op de oudere website.',
+    site: 'https://www.dier.nu/'
+  },
+  {
+    image: '/img/Appelflappen.jpg',
+    title: 'ChicLook',
+    technology: 'Wordpress - Oxygen Builder',
+    description: 'Tijdens mijn stage heb ik ChicLook gebouwd. De wireframe was gemaakt door een extern bedrijf, deze moest ik nabouwen in de Oxygen builder in Wordpress.',
+    site: 'https://chiclook.nl/'
+  },
+  {
+    image: '/img/Appelflappen.jpg',
     title: 'Eating with allergies',
     technology: 'React Native',
     description: 'Ik heb een jonger zusje die 1,5 jaar geleden gediagnosticeerd is met coeliacie en een half jaar geleden ook nog met een lactose intolerantie. Sindsdien is het vrij moeilijk om recepten te vinden die ook nog lekker zijn. Er zijn nauwelijks applicaties waarop mensen hun eigen recepten kunnen plaatsen en je kan filteren op allergenen. Daarom ben ik momenteel deze applicatie aan het ontwikkelen.',
@@ -254,6 +272,7 @@ const languageSkills = [
 const frameworkSkills = [
   { name: 'Vue.js', percentage: '80%' },
   { name: 'Nuxt.js', percentage: '65%' },
+  { name: 'Wordpress', percentage: '60%' },
   { name: 'React', percentage: '50%' },
   { name: 'React Native', percentage: '30%' },
    { name: 'NextJS', percentage: '10%' },
