@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 body {
-    @apply bg-[#f1f1f1]
+    @apply bg-[#f1f1f1] scroll-smooth
 }
 
 h1 {
@@ -17,9 +17,12 @@ h3 {
 }
 
 .swiper-img{
-    @apply h-50 w-80 object-cover rounded
+    @apply h-80 md:h-50 object-cover rounded w-full
 }
 
+.swiperslide {
+    @apply flex justify-center items-center
+}
 button, .button {
     @apply bg-[#856F80] text-white py-1 px-3 rounded m-4
 }
@@ -54,7 +57,7 @@ button:hover, .button:hover {
 
 
 .block {
-    @apply pb-20 sm:px-15 px-2 scroll-mt-40
+    @apply pb-20 sm:px-15 px-2 scroll-mt-40 
 }
 
 

@@ -43,13 +43,13 @@
     1440: { slidesPerView: 5, spaceBetween: 20 }
   }"
             class="swiper">
-      <SwiperSlide><img class="swiper-img" src="/img/FantasyFest.jpeg"></SwiperSlide>
-      <SwiperSlide><img class="swiper-img" src="/img/Frankrijk.jpg"></SwiperSlide>
-      <SwiperSlide><img class="swiper-img" src="/img/Fotografie.jpg"></SwiperSlide>
-      <SwiperSlide><img class="swiper-img" src="/img/Levy.JPG"></SwiperSlide>
-      <SwiperSlide><img class="swiper-img" src="/img/Diploma-uitreiking.jpg"></SwiperSlide>
-      <SwiperSlide><img class="swiper-img" src="/img/Appelflappen.jpg"></SwiperSlide>
-      <SwiperSlide><img class="swiper-img" src="/img/Eekhoorn.jpg"></SwiperSlide>
+      <SwiperSlide class="swiperslide"><img class="swiper-img" src="/img/FantasyFest.jpeg"></SwiperSlide>
+      <SwiperSlide class="swiperslide"><img class="swiper-img" src="/img/Frankrijk.jpg"></SwiperSlide>
+      <SwiperSlide class="swiperslide"><img class="swiper-img" src="/img/Fotografie.jpg"></SwiperSlide>
+      <SwiperSlide class="swiperslide"><img class="swiper-img" src="/img/Levy.JPG"></SwiperSlide>
+      <SwiperSlide class="swiperslide"><img class="swiper-img" src="/img/Diploma-uitreiking.jpg"></SwiperSlide>
+      <SwiperSlide class="swiperslide"><img class="swiper-img" src="/img/Appelflappen.jpg"></SwiperSlide>
+      <SwiperSlide class="swiperslide"><img class="swiper-img" src="/img/Eekhoorn.jpg"></SwiperSlide>
     </Swiper>
   </div>
 

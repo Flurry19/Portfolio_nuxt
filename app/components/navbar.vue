@@ -51,6 +51,7 @@ class="hover:bg-[#A99AA6] transition-colors p-2 md:w-20 lg:w-full text-center ro
         :key="nav.label"
         :href="nav.href"
         class="flex flex-col px-2 py-2 rounded hover:bg-[#A99AA6]"
+        @click="isOpen = false"
       >
         {{ nav.label }}
       </a>
