@@ -32,7 +32,7 @@
 
     <!-- Carousel with pictures -->
     <Swiper :modules="[Autoplay]"
-              :pagination="{ clickable: true }"
+              :pagination="{ clickable: false }"
               :loop="true"
               :autoplay="{ delay: 2000, disableOnInteraction: false }"
             :breakpoints="{
