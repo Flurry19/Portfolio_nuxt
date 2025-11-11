@@ -17,11 +17,11 @@ h3 {
 }
 
 .swiper-img{
-    @apply h-50 w-80 object-cover
+    @apply h-50 w-80 object-cover rounded
 }
 
 button, .button {
-    @apply bg-[#856F80] text-white py-1 px-3 rounded-lg m-4
+    @apply bg-[#856F80] text-white py-1 px-3 rounded m-4
 }
 
 button:hover, .button:hover {
@@ -29,14 +29,14 @@ button:hover, .button:hover {
 }
 
 .banner {
-    @apply pb-20 pt-20
+    @apply pb-20 pt-40
 }
 
 .bar {
     @apply h-1 w-30 bg-[#856F80] mx-auto mb-8 rounded-full
 }
 .card {
-    @apply bg-[#36558F] text-white rounded-lg pb-6 overflow-hidden;
+    @apply bg-[#36558F] text-white rounded pb-6 overflow-hidden;
     transition: transform 0.3s ease;
 }
 
@@ -54,7 +54,7 @@ button:hover, .button:hover {
 
 
 .block {
-    @apply pb-20 sm:px-15 px-2
+    @apply pb-20 sm:px-15 px-2 scroll-mt-40
 }
 
 

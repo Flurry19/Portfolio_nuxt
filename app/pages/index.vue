@@ -1,9 +1,9 @@
 <template>
-  <Navbar></Navbar>
+  <Navbar :navItems="navItems"></Navbar>
   <div class="text-center">
 
 <!--  Banner  -->
-  <div class="banner">
+  <div id="banner" class="banner">
   <p>Hallo ik ben</p>
 <h1>Sharon de Wit</h1>
     <p class="pt-4">Fullstack Developer & Security Analyst</p>
@@ -49,12 +49,12 @@
       <SwiperSlide><img class="swiper-img" src="/img/Levy.JPG"></SwiperSlide>
       <SwiperSlide><img class="swiper-img" src="/img/Diploma-uitreiking.jpg"></SwiperSlide>
       <SwiperSlide><img class="swiper-img" src="/img/Appelflappen.jpg"></SwiperSlide>
-      <SwiperSlide><img class="swiper-img" src="/img/MainBefore.jpg"></SwiperSlide>
+      <SwiperSlide><img class="swiper-img" src="/img/Eekhoorn.jpg"></SwiperSlide>
     </Swiper>
   </div>
 
 <!--    About me   -->
-    <div class="block">
+    <div id="about" class="block">
       <h2 class="subtitle">Over mij</h2>
       <div class="bar"/>
       <div class="px-4 md:px-20 lg:px-40">
@@ -66,12 +66,12 @@
     </div>
 
 <!--    Recent Projects  -->
-      <div class="block" >
+      <div id="projects" class="block" >
         <h2>Recente projecten</h2>
         <div class="bar"/>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           <div
-              class="text-left card flex flex-col bg-[#36558F] text-white rounded-lg duration-300"
+              class="text-left card flex flex-col bg-[#36558F] text-white rounded duration-300"
               v-for="(card, index) in valueCards"
               :key="index"
           >
@@ -100,10 +100,10 @@
       </div>
 
 <!--    Skills   -->
-    <div class="block">
+    <div id="skills" class="block">
       <h2>Skills</h2>
       <div class="bar"/>
-    <div class="grid lg:grid-cols-2">
+    <div class="grid lg:grid-cols-2 gap-4">
       <div>
    <h3>Languages</h3>
     <ProgressBar :skills="languageSkills" />
@@ -117,7 +117,7 @@
     
 
 <!--    Work Experience   -->
-    <div class="block">
+    <div id="work_experience" class="block">
       <h2>Werkervaring</h2>
       <div class="bar"/>
       <div>
@@ -129,7 +129,7 @@
     </div>
 
 <!--    Education   -->
-    <div class="block">
+    <div id="education" class="block">
       <h2>Opleiding</h2>
       <div class="bar"/>
       <div>
@@ -141,7 +141,7 @@
     </div>
 
 <!--    Certificates   -->
-    <div class="block">
+    <div id="certificates" class="block">
       <h2>Behaalde certificaten</h2>
       <div class="bar"/>
       <h3>Development</h3>
@@ -149,7 +149,7 @@
       :modules="[Autoplay, Pagination]"
       :pagination="{ clickable: true}"
       :loop="true"
-      :autoplay="{ delay: 2000, disableOnInteraction: false }"
+      :autoplay="{ delay: 2000, disableOnInteraction: true }"
       :breakpoints="{
         320: { slidesPerView: 1, spaceBetween: 10 },
         640: { slidesPerView: 2, spaceBetween: 10 },
@@ -171,7 +171,7 @@
       :modules="[Autoplay, Pagination]"
       :pagination="{ clickable: true }"
       :loop="true"
-      :autoplay="{ delay: 2000, disableOnInteraction: false }"
+      :autoplay="{ delay: 2000, disableOnInteraction: true }"
       :breakpoints="{
         320: { slidesPerView: 1, spaceBetween: 10 },
         640: { slidesPerView: 2, spaceBetween: 10 },
@@ -231,14 +231,14 @@ const valueCards = [
     site: 'https://petsittercare.vercel.app/#/'
   },
   {
-    image: '/img/Appelflappen.jpg',
+    image: '/img/Dier_image.png',
     title: 'Stichting Dierenlot',
     technology: 'Wordpress - Oxygen Builder',
     description: 'Tijdens mijn stage heb ik gewerkt aan de nieuwe website van Stichting Dierenlot. De oude website moest opgebouwd worden naar een Wordpress website. De styling is hetzelfde gebleven als op de oudere website.',
     site: 'https://www.dier.nu/'
   },
   {
-    image: '/img/Appelflappen.jpg',
+    image: '/img/Chiclook_image.png',
     title: 'ChicLook',
     technology: 'Wordpress - Oxygen Builder',
     description: 'Tijdens mijn stage heb ik ChicLook gebouwd. De wireframe was gemaakt door een extern bedrijf, deze moest ik nabouwen in de Oxygen builder in Wordpress.',
@@ -342,5 +342,14 @@ const educations = [
     place: 'Hogeschool Rotterdam',
     function: 'Creative Media & Game Technologies'
   }
+]
+
+const navItems = [
+  { href: "#about", label: "Over mij" },
+  { href: "#projects", label: "Recente projecten" },
+  { href: "#skills", label: "Skills" },
+  { href: "#work_experience", label: "Werkervaring" },
+  { href: "#education", label: "Opleiding" },
+  { href: "#certificates", label: "Behaalde certificaten" },
 ]
 </script>
