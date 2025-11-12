@@ -1,5 +1,12 @@
 @reference "tailwindcss";
 
+
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
 body {
     @apply bg-[#f1f1f1] scroll-smooth
 }
@@ -32,7 +39,7 @@ button:hover, .button:hover {
 }
 
 .banner {
-    @apply pb-20 pt-40
+    @apply pb-20 pt-40 
 }
 
 .bar {
@@ -57,7 +64,7 @@ button:hover, .button:hover {
 
 
 .block {
-    @apply pb-20 sm:px-15 px-2 scroll-mt-40 
+    @apply pb-60 sm:px-15 px-2 scroll-mt-40 xl:w-2/3 lg:w-4/5 md:w-4/5 w-full mx-auto
 }
 
 

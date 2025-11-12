@@ -1,10 +1,9 @@
 <template>
   <Navbar :navItems="navItems"></Navbar>
-  <div class="text-center">
+  <div class="text-center roboto-slab">
 
 <!--  Banner  -->
   <div id="banner" class="banner">
-  <p>Hallo ik ben</p>
 <h1>Sharon de Wit</h1>
     <p class="pt-4">Fullstack Developer & Security Analyst</p>
     <div class="flex flex-col items-center">
@@ -42,7 +41,7 @@
     1024: { slidesPerView: 4, spaceBetween: 20 },
     1440: { slidesPerView: 5, spaceBetween: 20 }
   }"
-            class="swiper">
+            class="swiper mt-20">
       <SwiperSlide class="swiperslide"><img class="swiper-img" src="/img/FantasyFest.jpeg"></SwiperSlide>
       <SwiperSlide class="swiperslide"><img class="swiper-img" src="/img/Frankrijk.jpg"></SwiperSlide>
       <SwiperSlide class="swiperslide"><img class="swiper-img" src="/img/Fotografie.jpg"></SwiperSlide>
@@ -57,7 +56,7 @@
     <div id="about" class="block">
       <h2 class="subtitle">Over mij</h2>
       <div class="bar"/>
-      <div class="px-4 md:px-20 lg:px-40">
+      <div class="px-4">
 <p class="italic text-[#808080] mb-4">3 jaar ervaring in software development</p>
       <p class="text-left">In 2022 ben ik gestart met de opleiding Creative Media & Game Technologies. Sindsdien heb ik een passie gevonden voor programmeren.
       In maart 2025 ben ik gestart met werken bij Wortell als Triage Analyst, waarbij ik heb gemerkt dat ik ook veel interesse in de cybersecurity heb. Daarom ben ik momenteel bezig met een minor in de cybersecurity. Ik ben bezig met cursussen op Tryhackme op mijn kennis op het gebied van cybersecurity te vergroten en cursussen op Codeacademy om mijn kennis op het gebied van software development te vergroten.</p>
@@ -67,11 +66,11 @@
 
 <!--    Recent Projects  -->
       <div id="projects" class="block" >
-        <h2>Recente projecten</h2>
+        <h2>Projecten</h2>
         <div class="bar"/>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
           <div
-              class="text-left card flex flex-col bg-[#36558F] text-white rounded duration-300"
+              class="text-left card flex flex-col bg-[#36558F] text-white rounded duration-300 min-h-200"
               v-for="(card, index) in valueCards"
               :key="index"
           >
@@ -103,7 +102,7 @@
     <div id="skills" class="block">
       <h2>Skills</h2>
       <div class="bar"/>
-    <div class="grid lg:grid-cols-2 gap-4">
+    <div class="grid lg:grid-cols-2 gap-8 w-full">
       <div>
    <h3>Languages</h3>
     <ProgressBar :skills="languageSkills" />
@@ -120,7 +119,7 @@
     <div id="work_experience" class="block">
       <h2>Werkervaring</h2>
       <div class="bar"/>
-      <div class="w-2/3 mx-auto">
+      <div>
 <div v-for="work in workExperiences"
       :key="work.place">
   <Workarea :item="work"/>
@@ -132,7 +131,7 @@
     <div id="education" class="block">
       <h2>Opleiding</h2>
       <div class="bar"/>
-       <div class="w-2/3 mx-auto">
+       <div>
         <div v-for="education in educations"
              :key="education.place">
           <Workarea :item="education"/>
@@ -142,7 +141,7 @@
 
 <!--    Certificates   -->
     <div id="certificates" class="block">
-      <h2>Behaalde certificaten</h2>
+      <h2>Certificaten</h2>
       <div class="bar"/>
       <h3>Development</h3>
   <Swiper
@@ -261,22 +260,22 @@ const languageSkills = [
   },
    {
     name: 'Typescript',
-    percentage: '30%'
+    percentage: '55%'
   },
   { name: 'PHP',
-  percentage: '20%'
+  percentage: '40%'
 },
-    { name: 'C#', percentage: '10%' },
+    { name: 'C# (Unity)', percentage: '20%' },
 ]
 
 const frameworkSkills = [
-  { name: 'Vue.js', percentage: '80%' },
-  { name: 'Nuxt.js', percentage: '65%' },
-  { name: 'Wordpress', percentage: '60%' },
+  { name: 'Vue.js', percentage: '90%' },
+  { name: 'Nuxt.js', percentage: '80%' },
+  { name: 'Wordpress (Oxygen Builder)', percentage: '60%' },
   { name: 'React', percentage: '50%' },
   { name: 'React Native', percentage: '30%' },
-   { name: 'NextJS', percentage: '10%' },
-    { name: 'Laravel', percentage: '10%' }
+  { name: 'NextJS', percentage: '30%' },
+  { name: 'Laravel', percentage: '30%' }
 ];
 
 const developmentCertificates = [
@@ -305,7 +304,7 @@ const workExperiences = [
     date: 'Februari 2023 - Juni 2023',
     place: 'Golfpark de Star',
     function: 'Horeca Medewerker',
-    description: 'Hier heb ik mijna rechtszaak gestart'
+    description: ''
   }, {
     date: 'Juli 2023 - Augustus 2024',
     place: 'Golfbaan Delfland',
@@ -333,7 +332,7 @@ const educations = [
     {
   date: 'Augustus 2012 - Juli 2014',
   place: 'Aloysius College',
-  function: 'Gifted Education'
+  function: 'Gifted Education (VWO)'
 }, {
     date: 'Juli 2014 - Juni 2019',
     place: 'Picasso Lyceum',
@@ -353,10 +352,10 @@ const educations = [
 
 const navItems = [
   { href: "#about", label: "Over mij" },
-  { href: "#projects", label: "Recente projecten" },
+  { href: "#projects", label: "Projecten" },
   { href: "#skills", label: "Skills" },
   { href: "#work_experience", label: "Werkervaring" },
   { href: "#education", label: "Opleiding" },
-  { href: "#certificates", label: "Behaalde certificaten" },
+  { href: "#certificates", label: "Certificaten" },
 ]
 </script>

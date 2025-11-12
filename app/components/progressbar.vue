@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-lg m-auto">
+  <div class="m-auto">
     <div v-for="skill in skills" :key="skill.name" class="mb-2">
       <h4 class="text-[#36558F] font-bold text-left">{{ skill.name }}</h4>
       <div class="bg-[#c3ccdd] overflow-hidden rounded-full">
