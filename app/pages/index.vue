@@ -56,11 +56,16 @@
     <div id="about" class="block">
       <h2 class="subtitle">Over mij</h2>
       <div class="bar"/>
-      <div class="px-4">
-<p class="italic text-[#808080] mb-4">3 jaar ervaring in software development</p>
+      <p class="italic text-[#808080] mb-4">3 jaar ervaring in software development</p>
+      <div class="flex flex-row gap-4">
+        <div class="">
       <p class="text-left">In 2022 ben ik gestart met de opleiding Creative Media & Game Technologies. Sindsdien heb ik een passie gevonden voor programmeren.
       In maart 2025 ben ik gestart met werken bij Wortell als Triage Analyst, waarbij ik heb gemerkt dat ik ook veel interesse in de cybersecurity heb. Daarom ben ik momenteel bezig met een minor in de cybersecurity. Ik ben bezig met cursussen op Tryhackme op mijn kennis op het gebied van cybersecurity te vergroten en cursussen op Codeacademy om mijn kennis op het gebied van software development te vergroten.</p>
       <p class="text-left">Andere hobby's die ik heb zijn fotografie, creatief zijn op het gebied van handwerk en gamen. Voor mijn creatieve hobby heb ik dan ook een eigen bedrijf waarvoor ik glazen graveer en mokken sublimeer. Ook ben ik dol op dieren en heb ik een kat. </p>
+      </div>
+      <div>
+        <img src="/img/About.jpg" alt="">
+      </div>
       </div>
     </div>
 
@@ -68,13 +73,13 @@
       <div id="projects" class="block" >
         <h2>Projecten</h2>
         <div class="bar"/>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
           <div
-              class="text-left card flex flex-col bg-[#36558F] text-white rounded duration-300 min-h-200"
+              class="text-left card flex flex-col bg-[#36558F] text-white rounded duration-300"
               v-for="(card, index) in valueCards"
               :key="index"
           >
-            <div class="overflow-hidden h-48 sm:h-56 md:h-48">
+            <div class="overflow-hidden h-48 sm:h-56 md:h-48 items-stretch">
               <img
                   :src="card.image"
                   alt=""
@@ -152,9 +157,9 @@
       :breakpoints="{
         320: { slidesPerView: 1, spaceBetween: 10 },
         640: { slidesPerView: 2, spaceBetween: 10 },
-        768: { slidesPerView: 3, spaceBetween: 15 },
-        1024: { slidesPerView: 4, spaceBetween: 20 },
-        1440: { slidesPerView: 5, spaceBetween: 20 }
+        768: { slidesPerView: 2, spaceBetween: 15 },
+        1024: { slidesPerView: 3, spaceBetween: 20 },
+        1440: { slidesPerView: 4, spaceBetween: 20 }
       }"
       class="swiper mb-6"
     >
@@ -174,9 +179,9 @@
       :breakpoints="{
         320: { slidesPerView: 1, spaceBetween: 10 },
         640: { slidesPerView: 2, spaceBetween: 10 },
-        768: { slidesPerView: 3, spaceBetween: 15 },
-        1024: { slidesPerView: 4, spaceBetween: 20 },
-        1440: { slidesPerView: 5, spaceBetween: 20 }
+        768: { slidesPerView: 2, spaceBetween: 15 },
+        1024: { slidesPerView: 3, spaceBetween: 20 },
+        1440: { slidesPerView: 4, spaceBetween: 20 }
       }"
       class="swiper mb-6"
     >
@@ -187,7 +192,6 @@
         <CertificateCard :certificate="certificate" />
       </SwiperSlide>
     </Swiper>
-   
     </div>
 
   </div>
@@ -304,27 +308,27 @@ const workExperiences = [
     date: 'Februari 2023 - Juni 2023',
     place: 'Golfpark de Star',
     function: 'Horeca Medewerker',
-    description: ''
+    description: 'Ik was verantwoordelijk voor de bediening, de bar en het ontvangen van gasten. Wanneer ik alleen werkte, moest ik al deze taken combineren; soms werkten we met twee personen. In situaties zonder keuken nam ik ook de bereiding van eenvoudige gerechten op mij. Deze ervaring heeft mij geleerd om gestructureerd en efficiënt te werken, overzicht te bewaren en prioriteiten te stellen, zodat alles soepel verliep zonder dat er iets werd overgeslagen.'
   }, {
     date: 'Juli 2023 - Augustus 2024',
     place: 'Golfbaan Delfland',
     function: 'Horeca Medewerker',
-    description: ''
+    description: 'Bij Golfbaan Delfland werkte ik in een gestructureerd team, waarbij ik per dienst een vaste taak toegewezen kreeg. Ik zorgde ervoor dat drankjes op een nette en klantvriendelijke manier werden uitgeserveerd en hield daarbij continu overzicht over de tafels in mijn wijk. Het werk bij golfbaan Delfland leerde bij om meer georganiseerd te werken, verantwoordelijkheid te nemen en om efficiënt en op een gezellige manier samen te werken binnen een team.'
   }, {
     date: 'April 2024 - Juni 2024',
     place: 'LeafyLines (Freelance)',
     function: 'Fullstack Developer',
-    description: ''
+    description: 'Voor LeafyLines heb ik een volledige fullstack-website ontwikkeld, waarbij ik voornamelijk de frontend heb opgezet en ook gewerkt heb aan de backend. Dit project verbeterde mijn vaardigheden in webontwikkeling.'
   }, {
     date: 'Augustus 2024 - Februari 2025',
     place: 'Meewerkstage DIGIWEDO',
     function: 'Wordpress Developer',
-    description: ''
+    description: 'In een korte tijd had ik het systeem en de werkwijze van het stagebedrijf mij eigen gemaakt, ondanks dat ik hiervoor geen ervaring met Wordpress had. Al snel werkte ik zelfstandig aan websites en updates, wat mijn vermogen om sneller te leren en zelfstandig te werken verbeterde.'
   }, {
     date: 'Maart 2025 - HEDEN',
     place: 'Wortell',
     function: 'Triage Security Analyst',
-    description: ''
+    description: 'Sinds ik bij Wortell werk, heb ik een interesse gekregen in cybersecurity, waardoor ik mijn minor op dit gebied volg en aanvullende cursussen volg. Als Triage Security Analyst onderzoek ik logins en gebruikersactiviteiten om afwijkend gedrag te identificeren. Wanneer ik vdenk verdacht gedrag te zien, stuur ik mijn bevindingen door naar Tier 2, die het account indien nodig kan resetten. Door dit werk heb ik mijn analytisch vermogen, nauwkeurigheid en verantwoordelijkheidsgevoel verbeterd.'
   }
 ]
 
