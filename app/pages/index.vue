@@ -120,7 +120,7 @@
     <div id="work_experience" class="block">
       <h2>Werkervaring</h2>
       <div class="bar"/>
-      <div>
+      <div class="w-2/3 mx-auto">
 <div v-for="work in workExperiences"
       :key="work.place">
   <Workarea :item="work"/>
@@ -132,7 +132,7 @@
     <div id="education" class="block">
       <h2>Opleiding</h2>
       <div class="bar"/>
-      <div>
+       <div class="w-2/3 mx-auto">
         <div v-for="education in educations"
              :key="education.place">
           <Workarea :item="education"/>
@@ -234,7 +234,7 @@ const valueCards = [
     image: '/img/Dier_image.png',
     title: 'Stichting Dierenlot',
     technology: 'Wordpress - Oxygen Builder',
-    description: 'Tijdens mijn stage heb ik gewerkt aan de nieuwe website van Stichting Dierenlot. De oude website moest opgebouwd worden naar een Wordpress website. De styling is hetzelfde gebleven als op de oudere website.',
+    description: 'Tijdens mijn stage heb ik gewerkt aan de nieuwe website van Stichting Dierenlot. De oude website moest omgebouwd worden naar een Wordpress website. De styling is hetzelfde gebleven als op de oudere website.',
     site: 'https://www.dier.nu/'
   },
   {
@@ -294,31 +294,38 @@ const workExperiences = [
   {
     date: 'Januari 2022 - Juli 2022',
     place: 'Teleperformance - GGD Vaccinatielijn',
-    function: 'Medewerker Vaccinatielijn GGD'
+    function: 'Medewerker Vaccinatielijn GGD',
+    description: 'Tijdens de corona crisis was ik verantwoordelijk voor het inplannen van afspraken voor vaccinaties vanuit huis. Hierbij had ik veel contact met oudere bellers, wat vroeg om extra geduld, duidelijke communicatie en empathie. Bij dit werk was het dus erg van belang om goed te communiceren, aandachtig te kunnen luisteren en mij anders kunnen opstellen bij verschillende doelgroepen.'
   } , {
     date: 'Juni 2022 - Februari 2023',
     place: 'Local Heroes/ A La Carte',
-    function: 'Hospitality Medewerker'
+    function: 'Hospitality Medewerker',
+    description: 'Bij het uitzendbureau heb ik verschillende functies vervuld, waaronder het beheren van een foodtruck, op een internationaal evenement drankjes en bittergarnituur rondbrengen en invallen in de bediening bij diverse restaurants. Omdat elke werkomgeving en functie anders was, leerde ik snel schakelen en mij flexibel aanpassen aan de situatie. Dit werk heeft mij voorbereid om nieuwe werkzaamheden snel eigen te maken, klantgericht te handelen en samen te kunnen werken in diverse teams.'
   }, {
     date: 'Februari 2023 - Juni 2023',
     place: 'Golfpark de Star',
-    function: 'Horeca Medewerker'
+    function: 'Horeca Medewerker',
+    description: 'Hier heb ik mijna rechtszaak gestart'
   }, {
     date: 'Juli 2023 - Augustus 2024',
     place: 'Golfbaan Delfland',
-    function: 'Horeca Medewerker'
+    function: 'Horeca Medewerker',
+    description: ''
   }, {
     date: 'April 2024 - Juni 2024',
     place: 'LeafyLines (Freelance)',
-    function: 'Fullstack Developer'
+    function: 'Fullstack Developer',
+    description: ''
   }, {
     date: 'Augustus 2024 - Februari 2025',
     place: 'Meewerkstage DIGIWEDO',
-    function: 'Wordpress Developer'
+    function: 'Wordpress Developer',
+    description: ''
   }, {
     date: 'Maart 2025 - HEDEN',
     place: 'Wortell',
-    function: 'Triage Security Analyst'
+    function: 'Triage Security Analyst',
+    description: ''
   }
 ]
 
