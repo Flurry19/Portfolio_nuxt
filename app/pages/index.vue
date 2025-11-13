@@ -52,22 +52,34 @@
     </Swiper>
   </div>
 
-<!--    About me   -->
-    <div id="about" class="block">
-      <h2 class="subtitle">Over mij</h2>
-      <div class="bar"/>
-      <p class="italic text-[#808080] mb-4">3 jaar ervaring in software development</p>
-      <div class="flex flex-row gap-4">
-        <div class="">
-      <p class="text-left">In 2022 ben ik gestart met de opleiding Creative Media & Game Technologies. Sindsdien heb ik een passie gevonden voor programmeren.
-      In maart 2025 ben ik gestart met werken bij Wortell als Triage Analyst, waarbij ik heb gemerkt dat ik ook veel interesse in de cybersecurity heb. Daarom ben ik momenteel bezig met een minor in de cybersecurity. Ik ben bezig met cursussen op Tryhackme op mijn kennis op het gebied van cybersecurity te vergroten en cursussen op Codeacademy om mijn kennis op het gebied van software development te vergroten.</p>
-      <p class="text-left">Andere hobby's die ik heb zijn fotografie, creatief zijn op het gebied van handwerk en gamen. Voor mijn creatieve hobby heb ik dan ook een eigen bedrijf waarvoor ik glazen graveer en mokken sublimeer. Ook ben ik dol op dieren en heb ik een kat. </p>
-      </div>
-      <div>
-        <img src="/img/About.jpg" alt="">
-      </div>
-      </div>
+<!-- About me -->
+<div id="about" class="block">
+  <h2 class="subtitle text-2xl font-semibold mb-2">Over mij</h2>
+  <div class="bar mb-4"></div>
+
+  <p class="italic text-[#808080] mb-4">3 jaar ervaring in software development</p>
+
+  <div class="flex flex-col md:flex-row items-center gap-6">
+    <div class="md:w-2/3 text-left">
+      <p class="mb-4">
+        In 2022 ben ik gestart met de opleiding Creative Media & Game Technologies. Sindsdien heb ik een passie gevonden voor programmeren.
+        In maart 2025 ben ik gestart met werken bij Wortell als Triage Analyst, waarbij ik heb gemerkt dat ik ook veel interesse in de cybersecurity heb. Daarom ben ik momenteel bezig met een minor in de cybersecurity. Ik ben bezig met cursussen op Tryhackme om mijn kennis op het gebied van cybersecurity te vergroten en cursussen op Codeacademy om mijn kennis op het gebied van software development te vergroten.
+      </p>
+      <p>
+        Andere hobby's die ik heb zijn fotografie, creatief zijn op het gebied van handwerk en gamen. Voor mijn creatieve hobby heb ik dan ook een eigen bedrijf waarvoor ik glazen graveer en mokken sublimeer. Ook ben ik dol op dieren en heb ik een kat.
+      </p>
     </div>
+
+    <div class="md:w-1/3 flex justify-center md:justify-end">
+      <img
+        src="/img/About.jpg"
+        alt="Over mij"
+        class="rounded object-cover w-full max-w-sm h-auto shadow-lg"
+      />
+    </div>
+  </div>
+</div>
+
 
 <!--    Recent Projects  -->
       <div id="projects" class="block" >
@@ -75,7 +87,7 @@
         <div class="bar"/>
         <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
           <div
-              class="text-left card flex flex-col bg-[#36558F] text-white rounded duration-300"
+              class="text-left card flex flex-col rounded duration-300"
               v-for="(card, index) in valueCards"
               :key="index"
           >
@@ -90,7 +102,7 @@
             <div class="px-4 py-4 flex flex-col flex-1">
               <h4 class="font-bold text-2xl mb-2">{{ card.title }}</h4>
               <p class="italic mb-2">Technologie: {{ card.technology }}</p>
-              <p class="mb-4">{{ card.description }}</p>
+              <p class="mb-4 text-black">{{ card.description }}</p>
               <div class="flex-grow"></div>
               <a v-if="card.site" :href="card.site" target="_blank" class="button mt-4 flex items-center gap-2 justify-center">
                 <p>Bekijk Project</p>
@@ -117,6 +129,32 @@
     <ProgressBar :skills="frameworkSkills" />
     </div>
     </div>
+      <Swiper
+      :modules="[Autoplay]"
+      :loop="true"
+      freemode="true"
+      :autoplay="{ delay: 0, disableOnInteraction: false }"
+
+   :allowTouchMove= "false",
+
+:breakpoints="{
+        320: { slidesPerView: 6, spaceBetween: 10 },
+        640: { slidesPerView: 7, spaceBetween: 10 },
+        768: { slidesPerView: 8, spaceBetween: 15 },
+        1024: { slidesPerView: 9, spaceBetween: 20 },
+        1440: { slidesPerView: 10, spaceBetween: 20 }
+      }"
+:spaceBetween="32" 
+:speed="800" 
+      class="logoswiper mb-6 mt-6"
+    >
+      <SwiperSlide
+        v-for="logo in skillsLogo"
+        :key="logo.name"
+      >
+        <Logoskill :logo="logo" />
+      </SwiperSlide>
+    </Swiper>
     </div>
     
 
@@ -193,7 +231,7 @@
       </SwiperSlide>
     </Swiper>
     </div>
-
+  <Footer :navItems="navItems"></Footer>
   </div>
 </template>
 <script setup>
@@ -210,6 +248,7 @@ import {ref, onMounted} from 'vue';
 import ProgressBar from '../components/progressbar.vue'
 import CertificateCard from '../components/certificatecard.vue'
 import Workarea from "../components/workarea.vue";
+import Logoskill from '~/components/logoskill.vue';
 
 const valueCards = [
   {
@@ -361,5 +400,68 @@ const navItems = [
   { href: "#work_experience", label: "Werkervaring" },
   { href: "#education", label: "Opleiding" },
   { href: "#certificates", label: "Certificaten" },
+]
+
+const skillsLogo = [
+  {name: "HTML",
+    logo: "/img/logo/html.png"
+  },
+  {name: "CSS",
+    logo: "/img/logo/css.png"
+  },
+  {name: "Javascript",
+    logo: "/img/logo/Javascript.png"
+  },
+  {name: "Typescript",
+    logo: "/img/logo/Typescript.png"
+  },
+  {name: "PHP",
+    logo: "/img/logo/Php.png"
+  },
+  {name: "Github",
+    logo: "/img/logo/Github.png"
+  },
+  {name: "Git",
+    logo: "/img/logo/Git.png"
+  },
+  {name: "Vue",
+    logo: "/img/logo/vue.png"
+  },
+  {name: "Nuxt",
+    logo: "/img/logo/nuxt.png"
+  },
+  {name: "React",
+    logo: "/img/logo/react.png"
+  },
+  {name: "NextJS",
+    logo: "/img/logo/nextjs.png"
+  },
+  {name: "Laravel",
+    logo: "/img/logo/laravel.png"
+  },
+  {name: "Unity",
+    logo: "/img/logo/unity.png"
+  },
+  {name: "Visual Studio Code",
+    logo: "/img/logo/Visual_Studio_Code.png"
+  },
+  {name: "PHP Storm",
+    logo: "/img/logo/PHPstorm.png"
+  },
+  {name: "WordPress",
+    logo: "/img/logo/wordpress.png"
+  },
+  {name: "Figma",
+    logo: "/img/logo/figma.png"
+  },
+  {name: "Trello",
+    logo: "/img/logo/trello.png"
+  },
+  {name: "Jira",
+    logo: "/img/logo/jira.png"
+  },
+  {name: "ClickUp",
+    logo: "/img/logo/clickup.png"
+  },
 ]
 </script>
