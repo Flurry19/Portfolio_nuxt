@@ -273,20 +273,6 @@ const valueCards = [
     site: 'https://petsittercare.vercel.app/#/'
   },
   {
-    image: '/img/Dier_image.png',
-    title: 'Stichting Dierenlot',
-    technology: 'Wordpress - Oxygen Builder',
-    description: 'Tijdens mijn stage heb ik gewerkt aan de nieuwe website van Stichting Dierenlot. De oude website moest omgebouwd worden naar een Wordpress website. De styling is hetzelfde gebleven als op de oudere website.',
-    site: 'https://www.dier.nu/'
-  },
-  {
-    image: '/img/Chiclook_image.png',
-    title: 'ChicLook',
-    technology: 'Wordpress - Oxygen Builder',
-    description: 'Tijdens mijn stage heb ik ChicLook gebouwd. De wireframe was gemaakt door een extern bedrijf, deze moest ik nabouwen in de Oxygen builder in Wordpress.',
-    site: 'https://chiclook.nl/'
-  },
-  {
     image: '/img/Appelflappen.jpg',
     title: 'Eating with allergies',
     technology: 'React Native',
