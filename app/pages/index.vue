@@ -290,7 +290,7 @@ const valueCards = [
     image: '/img/Appelflappen.jpg',
     title: 'Eating with allergies',
     technology: 'React Native',
-    description: 'Ik heb een jonger zusje die 1,5 jaar geleden gediagnosticeerd is met coeliacie en een half jaar geleden ook nog met een lactose intolerantie. Sindsdien is het vrij moeilijk om recepten te vinden die ook nog lekker zijn. Er zijn nauwelijks applicaties waarop mensen hun eigen recepten kunnen plaatsen en je kan filteren op allergenen. Daarom ben ik momenteel deze applicatie aan het ontwikkelen.',
+    description: 'Ik heb een jongere zus die ongeveer 1 jaar geleden gediagnosticeerd is met coeliakie en een half jaar geleden ook nog met een lactose intolerantie. Sindsdien is het vrij moeilijk om recepten te vinden die ook nog lekker zijn. Er zijn nauwelijks applicaties waarop mensen hun eigen recepten kunnen plaatsen en je kan filteren op allergenen. Daarom ben ik momenteel deze applicatie aan het ontwikkelen.',
   }
 ]
 
@@ -337,12 +337,12 @@ const workExperiences = [
     date: 'Januari 2022 - Juli 2022',
     place: 'Teleperformance - GGD Vaccinatielijn',
     function: 'Medewerker Vaccinatielijn GGD',
-    description: 'Tijdens de corona crisis was ik verantwoordelijk voor het inplannen van afspraken voor vaccinaties vanuit huis. Hierbij had ik veel contact met oudere bellers, wat vroeg om extra geduld, duidelijke communicatie en empathie. Bij dit werk was het dus erg van belang om goed te communiceren, aandachtig te kunnen luisteren en mij anders kunnen opstellen bij verschillende doelgroepen.'
+    description: 'Tijdens de coronacrisis was ik verantwoordelijk voor het inplannen van afspraken voor vaccinaties vanuit huis. Hierbij had ik veel telefonisch contact met oudere mensen, wat vroeg om extra geduld, duidelijke communicatie en empathie. Bij dit werk was het dus erg van belang om goed te communiceren, aandachtig te kunnen luisteren en mij anders te kunnen opstellen bij verschillende doelgroepen.'
   } , {
     date: 'Juni 2022 - Februari 2023',
     place: 'Local Heroes/ A La Carte',
     function: 'Hospitality Medewerker',
-    description: 'Bij het uitzendbureau heb ik verschillende functies vervuld, waaronder het beheren van een foodtruck, op een internationaal evenement drankjes en bittergarnituur rondbrengen en invallen in de bediening bij diverse restaurants. Omdat elke werkomgeving en functie anders was, leerde ik snel schakelen en mij flexibel aanpassen aan de situatie. Dit werk heeft mij voorbereid om nieuwe werkzaamheden snel eigen te maken, klantgericht te handelen en samen te kunnen werken in diverse teams.'
+    description: 'Bij het uitzendbureau heb ik verschillende functies vervuld, waaronder het beheren van een foodtruck, op een internationaal evenement drankjes en bittergarnituur rondbrengen en invallen in de bediening bij diverse restaurants. Omdat elke werkomgeving en functie anders was, leerde ik snel schakelen en mij flexibel aan te passen aan de situatie. Dit werk heeft mij voorbereid om nieuwe werkzaamheden snel eigen te maken, klantgericht te handelen en samen te kunnen werken in diverse teams.'
   }, {
     date: 'Februari 2023 - Juni 2023',
     place: 'Golfpark de Star',
@@ -367,7 +367,7 @@ const workExperiences = [
     date: 'Maart 2025 - HEDEN',
     place: 'Wortell',
     function: 'Triage Security Analyst',
-    description: 'Sinds ik bij Wortell werk, heb ik een interesse gekregen in cybersecurity, waardoor ik mijn minor op dit gebied volg en aanvullende cursussen volg. Als Triage Security Analyst onderzoek ik logins en gebruikersactiviteiten om afwijkend gedrag te identificeren. Wanneer ik vdenk verdacht gedrag te zien, stuur ik mijn bevindingen door naar Tier 2, die het account indien nodig kan resetten. Door dit werk heb ik mijn analytisch vermogen, nauwkeurigheid en verantwoordelijkheidsgevoel verbeterd.'
+    description: 'Sinds ik bij Wortell werk, heb ik een interesse gekregen in cybersecurity, waardoor ik mijn minor op dit gebied volg en aanvullende cursussen volg. Als Triage Security Analyst onderzoek ik logins en gebruikersactiviteiten om afwijkend gedrag te identificeren. Wanneer ik denk verdacht gedrag te zien, stuur ik mijn bevindingen door naar Tier 2, die het account indien nodig kan resetten. Door dit werk heb ik mijn analytisch vermogen, nauwkeurigheid en verantwoordelijkheidsgevoel verbeterd.'
   }
 ]
 
