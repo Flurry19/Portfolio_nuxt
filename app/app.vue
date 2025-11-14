@@ -1,5 +1,5 @@
 <template>
-  <div class="roboto-slab">
+  <div>
     <NuxtPage />
   </div>
 </template>
