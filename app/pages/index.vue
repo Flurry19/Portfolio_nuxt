@@ -19,7 +19,7 @@
 <div class="flex justify-center items-center w-full">
   <a
     class="button flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded"
-    href="/files/CV Sharon de Wit 2025.pdf"
+    href="/files/CV_Sharon_de_Wit_2025.pdf"
     target="_blank"
   >
     <p class="m-0">Open CV</p>
