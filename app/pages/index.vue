@@ -63,10 +63,12 @@
     <div class="md:w-2/3 text-left">
       <p class="mb-4">
         In 2022 ben ik gestart met de opleiding Creative Media & Game Technologies. Sindsdien heb ik een passie gevonden voor programmeren.
-        In maart 2025 ben ik gestart met werken bij Wortell als Triage Analyst, waarbij ik heb gemerkt dat ik ook veel interesse in de cybersecurity heb. Daarom ben ik momenteel bezig met een minor in de cybersecurity. Ik ben bezig met cursussen op Tryhackme om mijn kennis op het gebied van cybersecurity te vergroten en cursussen op Codeacademy om mijn kennis op het gebied van software development te vergroten.
+        In maart 2025 ben ik gestart met werken bij Wortell als Triage Analyst, waarbij ik heb gemerkt dat ik ook erg veel interesse in de cybersecurity bleek te hebben. Daarom heb ik ervoor gekozen om de minor Security Lab te volgen. 
+        Deze minor bestond uit pentesting en secure coding, waardoor ik een goede basiskennis heb gekregen van offensive en defensive cybersecurity. Momenteel ben ik aan het afstuderen bij Enovation als Software Engineer. 
+        Daarnaast houd ik mij graag bezig met cursussen op Tryhackme om mijn kennis op het gebied van cybersecurity te vergroten en cursussen op Codeacademy om mijn kennis op het gebied van software development te vergroten.
       </p>
       <p>
-        Andere hobby's die ik heb zijn fotografie, creatief zijn op het gebied van handwerk en gamen. Voor mijn creatieve hobby heb ik dan ook een eigen bedrijf waarvoor ik glazen graveer en mokken sublimeer. Ook ben ik dol op dieren en heb ik een kat.
+        Andere hobby's die ik heb zijn fotografie, creatief zijn op het gebied van handwerk en gamen. Voor mijn creatieve hobby heb ik dan ook een eigen bedrijf waarvoor ik glazen graveer en mokken sublimeer.
       </p>
     </div>
 
@@ -255,7 +257,7 @@ const valueCards = [
     image: '/img/Nerdy Glazen logo.jpg',
     title: 'Nerdy Glazen',
     technology: 'Shopify',
-    description: 'Al een aantal jaren graveer ik als hobby glazen met de hand. Een paar jaar geleden heb ik mij hiervoor ingeschreven bij KVK zodat ik een eigen Shopify webshop kon opzetten. Het plan is om later een eigen webshop te bouwen, maar daarvoor ben ik nu eerst secure coding aan het leren, omdat er erg veel gevoelige informatie bij te pas komt.',
+    description: 'Al een aantal jaren graveer ik als hobby glazen met de hand. Een paar jaar geleden heb ik mij hiervoor ingeschreven bij KVK zodat ik een eigen Shopify webshop kon opzetten. Het plan is om later een eigen webshop te bouwen, maar omdat hier veel gevoelige informatie bij te pas komt, wil ik graag eerst meer kennis opdoen van Secure Coding.',
     site: 'https://www.nerdyglazen.com'
   },
   {
@@ -269,7 +271,7 @@ const valueCards = [
     image: '/img/George.JPG',
     title: 'PetSitterCare',
     technology: 'React Native',
-    description: 'Als bijbaantje verzorgde ik vaak katten en liet ik honden uit, hiervoor gebruikte ik zelf de app Pawshake. Echter ondervond ik zelf veel problemen aan Pawshake, dus ben ik met 2 anderen op het moment bezig met het ontwikkelen van een nieuwe app genaamd PetSitterCare, die veel meer gefocust is op de gebruiker van de applicatie. Ik heb deze applicatie eerder ontwikkeld voor een schoolopdracht, maar ik ben hem opnieuw aan het bouwen om hem gebruiksvriendelijker en veiliger te maken. De oude applicatie is hieronder gelinkt.',
+    description: 'Als bijbaantje verzorgde ik vaak katten en liet ik honden uit, hiervoor gebruikte ik zelf de app Pawshake. Echter ondervond ik zelf veel problemen met Pawshake, dus heb ik de app PetSittercare ontwikkeld voor een schoolopdracht. Deze staat niet online, omdat ik hem opnieuw wil bouwen met de kennis die ik nu heb ten opzichte van 1,5 jaar terug.',
     site: 'https://petsittercare.vercel.app/#/'
   },
   {
@@ -289,12 +291,13 @@ const languageSkills = [
   },
    {
     name: 'Typescript',
-    percentage: '55%'
+    percentage: '60%'
   },
   { name: 'PHP',
   percentage: '40%'
 },
     { name: 'C# (Unity)', percentage: '20%' },
+    { name: 'Java', percentage: '10%' },
 ]
 
 const frameworkSkills = [
@@ -304,7 +307,9 @@ const frameworkSkills = [
   { name: 'React', percentage: '50%' },
   { name: 'React Native', percentage: '30%' },
   { name: 'NextJS', percentage: '30%' },
-  { name: 'Laravel', percentage: '30%' }
+  { name: 'Laravel', percentage: '30%' },
+  { name: 'Angular', percentage: '10%'},
+  { name: 'Spring Boot', percentage: '10%'},
 ];
 
 const developmentCertificates = [
@@ -316,6 +321,8 @@ const developmentCertificates = [
 
 const cybersecurityCertificates = [
 {name: 'Pre Security Path', image: "/img/Pre-Security-Path_certificate_image.png", platform:"Tryhackme", pdf: '/files/Pre-Security_certificate.pdf'},
+{name: 'Advent of Cyber 2025', image: "/img/Advent_of_Cyber_2025_certificate_image.png", platform:"Tryhackme", pdf: '/files/Tryhackme Advent of Cyber Completion 2025.pdf'},
+
 ]
 
 const workExperiences = [
@@ -354,7 +361,13 @@ const workExperiences = [
     place: 'Wortell',
     function: 'Triage Security Analyst',
     description: 'Sinds ik bij Wortell werk, heb ik een interesse gekregen in cybersecurity, waardoor ik mijn minor op dit gebied volg en aanvullende cursussen volg. Als Triage Security Analyst onderzoek ik logins en gebruikersactiviteiten om afwijkend gedrag te identificeren. Wanneer ik denk verdacht gedrag te zien, stuur ik mijn bevindingen door naar Tier 2, die het account indien nodig kan resetten. Door dit werk heb ik mijn analytisch vermogen, nauwkeurigheid en verantwoordelijkheidsgevoel verbeterd.'
-  }
+  },{
+    date: 'Februari 2026 - HEDEN',
+    place: 'Afstudeerstage Enovation',
+    function: 'Software Engineer',
+    description: 'Sinds begin februari ben ik gestart als Software Engineer bij Enovation, waar ik mij bezig zal houden met klanten de mogelijkheid geven om zelf hun Identity Providers binnen Enovtion te configureren en beheren. De self-service wizard hiervoor zal ik gaan bouwen in Spring Boot (Java) en Angular (TypeScript).' 
+  },
+
 ]
 
 const educations = [
@@ -448,6 +461,15 @@ const skillsLogo = [
   },
   {name: "ClickUp",
     logo: "/img/logo/clickup.png"
+  },
+  {name: "Angular",
+    logo: "/img/logo/Angular.png"
+  },
+  {name: "Java",
+    logo: "/img/logo/Java.png"
+  },
+  {name: "Spring Boot",
+    logo: "/img/logo/Spring_Boot.png"
   },
 ]
 </script>
